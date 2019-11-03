@@ -1,13 +1,9 @@
 export default class Process{
     constructor(code, timeRequired){
-        this._code = code;
         this._timeRequired = timeRequired;
         this._next = null;
     }
 
-    get code(){
-        return this._code;
-    }
 
     get timeRequired(){
         return this._timeRequired;
@@ -15,10 +11,6 @@ export default class Process{
 
     get next(){
         return this._next;
-    }
-
-    set code(code){
-        this._code = code;
     }
 
     set timeRequired(timeRequired){
@@ -30,6 +22,6 @@ export default class Process{
     }
 
     toString(){
-        return '////Código: ' + this._code + '***Time Required: ' + this._timeRequired + '////';
+        return '////***Time Required: ' + this._timeRequired + '////';
     }
 }
